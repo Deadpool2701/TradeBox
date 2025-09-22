@@ -5,24 +5,28 @@
 //  Created by Amogh Mohta on 22/08/25.
 //
 
+#include "test_money.hpp"
 #include <cassert>
 #include <iostream>
 #include "Money.hpp"
 
-using namespace tb;
+using tb::Money;
 
-int main2() {
-    Money a = Money::from_int(100);
-    Money b = Money::from_int(50);
-    
-    Money sum = a+b;
-    Money diff = a-b;
-    Money mult = b*2.0;
-    
-    assert(sum.to_int()==150);
-    assert(diff.to_int()==50);
+namespace tb { namespace tests {
+
+void run_test_money() {
+    Money a = Money::from_int(100); // 100 INR
+    Money b = Money::from_int(50);  // 50 INR
+
+    Money sum = a + b;
+    Money diff = a - b;
+    Money mult = b * 2.0;
+
+    assert(sum.to_int() == 150);
+    assert(diff.to_int() == 50);
     assert(mult.to_int() == 100);
-    
-    std::cout << "All Money tests passed" << std::endl;
-    return 0;
+
+    std::cout << "[OK] test_money\n";
 }
+
+}}

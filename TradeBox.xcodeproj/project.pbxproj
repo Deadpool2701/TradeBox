@@ -16,22 +16,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		7A2A2D8E2E81CE37009A14AE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7A1E5E552E54FB3000A0C09C /* TradeBox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TradeBox; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A2A2D902E81CE37009A14AE /* TradeBoxTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TradeBoxTests; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7A2A2D9C2E81CE54009A14AE /* Exceptions for "TradeBox" folder in "TradeBoxTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				src/RefsPtrsExercises.cpp,
+				tests/basics_l1.cpp,
+				tests/pointers_and_refs_exercises.cpp,
+				tests/test_money.cpp,
+				tests/test_runner.cpp,
+			);
+			target = 7A2A2D8F2E81CE37009A14AE /* TradeBoxTests */;
+		};
+		7A2A2D9F2E81CE9F009A14AE /* Exceptions for "TradeBox" folder in "TradeBox" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				tests/basics_l1.cpp,
+				tests/pointers_and_refs_exercises.cpp,
+				tests/test_money.cpp,
+				tests/test_runner.cpp,
+			);
+			target = 7A1E5E542E54FB3000A0C09C /* TradeBox */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7A1E5E572E54FB3000A0C09C /* TradeBox */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7A2A2D9F2E81CE9F009A14AE /* Exceptions for "TradeBox" folder in "TradeBox" target */,
+				7A2A2D9C2E81CE54009A14AE /* Exceptions for "TradeBox" folder in "TradeBoxTests" target */,
+			);
 			path = TradeBox;
+			sourceTree = "<group>";
+		};
+		7A2A2D912E81CE37009A14AE /* TradeBoxTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TradeBoxTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7A1E5E522E54FB3000A0C09C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A2A2D8D2E81CE37009A14AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				7A1E5E572E54FB3000A0C09C /* TradeBox */,
+				7A2A2D912E81CE37009A14AE /* TradeBoxTests */,
 				7A1E5E562E54FB3000A0C09C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				7A1E5E552E54FB3000A0C09C /* TradeBox */,
+				7A2A2D902E81CE37009A14AE /* TradeBoxTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +134,28 @@
 			productReference = 7A1E5E552E54FB3000A0C09C /* TradeBox */;
 			productType = "com.apple.product-type.tool";
 		};
+		7A2A2D8F2E81CE37009A14AE /* TradeBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A2A2D942E81CE37009A14AE /* Build configuration list for PBXNativeTarget "TradeBoxTests" */;
+			buildPhases = (
+				7A2A2D8C2E81CE37009A14AE /* Sources */,
+				7A2A2D8D2E81CE37009A14AE /* Frameworks */,
+				7A2A2D8E2E81CE37009A14AE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7A2A2D912E81CE37009A14AE /* TradeBoxTests */,
+			);
+			name = TradeBoxTests;
+			packageProductDependencies = (
+			);
+			productName = TradeBoxTests;
+			productReference = 7A2A2D902E81CE37009A14AE /* TradeBoxTests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -89,10 +163,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					7A1E5E542E54FB3000A0C09C = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					7A2A2D8F2E81CE37009A14AE = {
+						CreatedOnToolsVersion = 26.0;
 					};
 				};
 			};
@@ -111,12 +188,20 @@
 			projectRoot = "";
 			targets = (
 				7A1E5E542E54FB3000A0C09C /* TradeBox */,
+				7A2A2D8F2E81CE37009A14AE /* TradeBoxTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A1E5E512E54FB3000A0C09C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A2A2D8C2E81CE37009A14AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -160,6 +245,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -184,6 +270,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Debug;
 		};
@@ -221,6 +308,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -238,6 +326,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Release;
 		};
@@ -245,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -253,6 +343,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7A2A2D952E81CE37009A14AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7A2A2D962E81CE37009A14AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -274,6 +383,15 @@
 			buildConfigurations = (
 				7A1E5E5D2E54FB3100A0C09C /* Debug */,
 				7A1E5E5E2E54FB3100A0C09C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A2A2D942E81CE37009A14AE /* Build configuration list for PBXNativeTarget "TradeBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A2A2D952E81CE37009A14AE /* Debug */,
+				7A2A2D962E81CE37009A14AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
